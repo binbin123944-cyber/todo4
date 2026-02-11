@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Tasks</h1>
+            <p id="date-display">Today</p>
+        </header>
+
+        <main>
+            <!-- Calendar Section -->
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button id="prev-month" class="month-btn"><i class="fas fa-chevron-left"></i></button>
+                    <h2 id="current-month">Month Year</h2>
+                    <button id="next-month" class="month-btn"><i class="fas fa-chevron-right"></i></button>
+                    <button id="today-btn" class="today-btn">Today</button>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div id="calendar-grid" class="calendar-grid">
+                    <!-- Days will be injected here -->
+                </div>
+            </div>
+
+            <!-- Validation/Selected Date Display -->
+            <div class="selected-date-header">
+                <h3 id="selected-date-display">Today</h3>
+            </div>
+
+            <div id="empty-state" class="empty-state hidden">
+                <i class="fas fa-clipboard-check"></i>
+                <p>No tasks for this day</p>
+            </div>
+            <ul id="todo-list" class="todo-list">
+                <!-- Todo items will be injected here -->
+            </ul>
+        </main>
+
+        <section class="input-area">
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Add a new task..." autocomplete="off">
+                <button type="submit" id="add-btn">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </form>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
